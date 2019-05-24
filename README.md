@@ -1,5 +1,7 @@
 # Sentiment Analysis using SageMaker
 
+This project has been done as a part of the [Udacity Deep Learning Nanodegree](https://eu.udacity.com/course/deep-learning-nanodegree--nd101)
+
 ## Project's objective
 The objective of this project was to train a recurent model that can perform sentiment analysis on a given movie review. The two predictions are positive or negative.
 
