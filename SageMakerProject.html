@@ -13772,7 +13772,7 @@ Saving to: ‘../data/aclImdb_v1.tar.gz’
 <p><strong>Answer:</strong> <br/>
 The review_to_words method does the following operations in order to convert the text: <br/></p>
 <ol>
-<li>Convert all the text to lower case <br/></li>
+<li>First of all the text is converted to lower case. After this step, all the characters which are not a digit or a small or big letter are replaced with the blank space character. All the blanks are going to be removed at the next step.<br/></li>
 <li>Split the text into separate words <br/></li>
 <li>Remove the stop words - they are not relevant for training the model <br/></li>
 <li>Stemming - it truncates the words - removes the suffix. For example 'occured' is converted into 'occurred'</li>
@@ -134523,7 +134523,11 @@ Billable seconds: 6157
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> <br/>
-XGBosst is performing better than the model creted earlier. These two models behave differently since they have different training strategies. In my opinion, XGBoost is better for sentiment analysis tasks, since it requires less training and can yield to better results since it is a classification problem.</p>
+I think that XGBoost and the model created earlier are comparable in terms of perfromance. I think that this LSTM model can be improved, since now it was trained only one time, with only on set of hyperparameters. <br/></p>
+<p>The models can behave differently because they have a different architecture and they also process the data differently.</p>
+<p>XGBoost is an implementation of gradient boosted decision trees designed for speed and performance and which is suitable for classification and regression when working with tabular data. The LSTM (Long Short Term Memory) is a type of recurrent neural network suitable for tasks in which we should take into consideration features from previous inputs (not only for the current input).  <br/></p>
+<p>XGBoost uses the bag of words in order to encode the vectors that repesent the given input (review). One of disadvantages for using bag of words is that the order of the words is lost. LSTM uses an embedding vector for each word and then it creates a hidden state for each of the reviews. Here the advantage is that the order of words is taken into consideration as a feature, and I think this is an important aspect in sentyment analysis problems. <br/></p>
+<p>In my opinion, I think LSTM is a better option for sentiment analysis tasks since it can also use the information extracted from the order of words.</p>
 
 </div>
 </div>
